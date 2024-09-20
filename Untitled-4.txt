@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login & Registration</title>
+                <style>
+                        /* Basic reset */
+                                * {
+                                                box-sizing: border-box;
+                                                            margin: 0;
+                                                                        padding: 0;
+                                }
+
+                                        body, html {
+                                                        font-family: 'Arial', sans-serif;
+                                                                    background: #f6f5f7;
+                                                                                display: flex;
+                                                                                            justify-content: center;
+                                                                                                        align-items: center;
+                                                                                                                    height: 100vh;
+                                                                                                                                margin: 0;
+                                        }
+
+                                                .container {
+                                                                background-color: #fff;
+                                                                            border-radius: 10px;
+                                                                                        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                                                                                                                0 10px 10px rgba(0, 0, 0, 0.22);
+                                                                                                                            position: relative;
+                                                                                                                                        overflow: hidden;
+                                                                                                                                                    width: 400px;
+                                                                                                                                                                max-width: 100%;
+                                                                                                                                                                            min-height: 500px;
+                                                                                                                                                                                        padding: 40px 20px;
+                                                }
+
+                                                        form {
+                                                                        background-color: #fff;
+                                                                                    display: flex;
+                                                                                                flex-direction: column;
+                                                                                                            justify-content: center;
+                                                                                                                        align-items: center;
+                                                                                                                                    text-align: center;
+                                                        }
+
+                                                                input {
+                                                                                background-color: #eee;
+                                                                                            border: none;
+                                                                                                        padding: 12px 15px;
+                                                                                                                    margin: 8px 0;
+                                                                                                                                width: 100%;
+                                                                }
+
+                                                                        button {
+                                                                                        border-radius: 20px;
+                                                                                                    border: 1px solid #ff4b2b;
+                                                                                                                background-color: #ff4b2b;
+                                                                                                                            color: white;
+                                                                                                                                        font-size: 12px;
+                                                                                                                                                    font-weight: bold;
+                                                                                                                                                                padding: 12px 45px;
+                                                                                                                                                                            letter-spacing: 1px;
+                                                                                                                                                                                        text-transform: uppercase;
+                                                                                                                                                                                                    transition: transform 80ms ease-in;
+                                                                                                                                                                                                                margin-top: 20px;
+                                                                        }
+
+                                                                                button:hover {
+                                                                                                transform: scale(1.05);
+                                                                                }
+
+                                                                                        h1 {
+                                                                                                        font-weight: bold;
+                                                                                                                    margin-bottom: 20px;
+                                                                                        }
+
+                                                                                                p {
+                                                                                                                font-size: 14px;
+                                                                                                                            font-weight: 100;
+                                                                                                                                        letter-spacing: 0.5px;
+                                                                                                }
+
+                                                                                                        .toggle-link {
+                                                                                                                        background: none;
+                                                                                                                                    border: none;
+                                                                                                                                                color: #ff4b2b;
+                                                                                                                                                            font-size: 14px;
+                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                    padding: 10px 0;
+                                                                                                        }
+
+                                                                                                                .toggle-link:hover {
+                                                                                                                                text-decoration: underline;
+                                                                                                                }
+                                                                                                                    </style>
+                                                                                                                    </head>
+                                                                                                                    <body>
+                                                                                                                        <div class="container">
+                                                                                                                                <!-- Login Form -->
+                                                                                                                                        <form id="loginForm">
+                                                                                                                                                    <h1>Login</h1>
+                                                                                                                                                                <input type="email" placeholder="Email" id="loginEmail" required/>
+                                                                                                                                                                            <input type="password" placeholder="Password" id="loginPassword" required/>
+                                                                                                                                                                                        <button type="submit">Login</button>
+                                                                                                                                                                                                    <p>Don't have an account? <button class="toggle-link" id="showSignUp">Sign Up</button></p>
+                                                                                                                                                                                                            </form>
+
+                                                                                                                                                                                                                    <!-- Registration Form (hidden by default) -->
+                                                                                                                                                                                                                            <form id="registerForm" style="display: none;">
+                                                                                                                                                                                                                                        <h1>Create Account</h1>
+                                                                                                                                                                                                                                                    <input type="text" placeholder="Name" id="registerName" required/>
+                                                                                                                                                                                                                                                                <input type="email" placeholder="Email" id="registerEmail" required/>
+                                                                                                                                                                                                                                                                            <input type="password" placeholder="Password" id="registerPassword" required/>
+                                                                                                                                                                                                                                                                                        <button type="submit">Register</button>
+                                                                                                                                                                                                                                                                                                    <p>Already have an account? <button class="toggle-link" id="showLogin">Login</button></p>
+                                                                                                                                                                                                                                                                                                            </form>
+                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                    <script>
+                                                                                                                                                                                                                                                                                                                            const loginForm = document.getElementById('loginForm');
+                                                                                                                                                                                                                                                                                                                                    const registerForm = document.getElementById('registerForm');
+                                                                                                                                                                                                                                                                                                                                            const showSignUpButton = document.getElementById('showSignUp');
+                                                                                                                                                                                                                                                                                                                                                    const showLoginButton = document.getElementById('showLogin');
+
+                                                                                                                                                                                                                                                                                                                                                            // Show registration form and hide login form
+                                                                                                                                                                                                                                                                                                                                                                    showSignUpButton.addEventListener('click', function (event) {
+                                                                                                                                                                                                                                                                                                                                                                                    event.preventDefault(); // Prevent page reload
+                                                                                                                                                                                                                                                                                                                                                                                                loginForm.style.display = 'none';
+                                                                                                                                                                                                                                                                                                                                                                                                            registerForm.style.display = 'block';
+                                                                                                                                                                                                                                                                                                                                                                    });
+
+                                                                                                                                                                                                                                                                                                                                                                            // Show login form and hide registration form
+                                                                                                                                                                                                                                                                                                                                                                                    showLoginButton.addEventListener('click', function (event) {
+                                                                                                                                                                                                                                                                                                                                                                                                    event.preventDefault(); // Prevent page reload
+                                                                                                                                                                                                                                                                                                                                                                                                                registerForm.style.display = 'none';
+                                                                                                                                                                                                                                                                                                                                                                                                                            loginForm.style.display = 'block';
+                                                                                                                                                                                                                                                                                                                                                                                    });
+
+                                                                                                                                                                                                                                                                                                                                                                                            // Simulate form submission handling
+                                                                                                                                                                                                                                                                                                                                                                                                    loginForm.addEventListener('submit', function(event) {
+                                                                                                                                                                                                                                                                                                                                                                                                                    event.preventDefault();
+                                                                                                                                                                                                                                                                                                                                                                                                                                alert('Login form submitted with Email: ' + document.getElementById('loginEmail').value);
+                                                                                                                                                                                                                                                                                                                                                                                                    });
+
+                                                                                                                                                                                                                                                                                                                                                                                                            registerForm.addEventListener('submit', function(event) {
+                                                                                                                                                                                                                                                                                                                                                                                                                            event.preventDefault();
+                                                                                                                                                                                                                                                                                                                                                                                                                                        alert('Registration form submitted with Email: ' + document.getElementById('registerEmail').value);
+                                                                                                                                                                                                                                                                                                                                                                                                            });
+                                                                                                                                                                                                                                                                                                                                                                                                                </script>
+                                                                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                            })
+                                                                                                                                                                                                                                                                                                                                                                                                    })
+                                                                                                                                                                                                                                                                                                                                                                                    })
+                                                                                                                                                                                                                                                                                                                                                                    })
+                                                                                                                }
+                                                                                                        }
+                                                                                                }
+                                                                                        }
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
