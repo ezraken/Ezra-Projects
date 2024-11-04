@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngao Ya Imani International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header, footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        header h1, footer h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav a {
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #3e8e41;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        section {
+            padding: 2rem 0;
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .icon {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .programs, .get-involved {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .programs .card, .get-involved .card {
+            width: 250px;
+            margin: 1rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            padding: 0.75rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ngao Ya Imani International</h1>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#programs">Programs</a>
+        <a href="#get-involved">Get Involved</a>
+        <a href="#news">News & Updates</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>Ngao Ya Imani International, founded in June 2024 in Thome village, aims to uplift the marginalized communities of Laikipia Central, Kenya, through diverse developmental projects focusing on education, sustainability, and faith.</p>
+    </section>
+
+    <section id="programs" class="container">
+        <h2>Our Programs</h2>
+        <div class="programs">
+            <div class="card">
+                <i class="fas fa-utensils icon"></i>
+                <h3>Food for Education</h3>
+                <p>Providing nutritious meals to school children, enhancing their learning and attendance.</p>
+                <a href="#get-involved" class="cta-button">Learn More</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-graduation-cap icon"></i>
+                <h3>Education Sponsorships</h3>
+                <p>Supporting vulnerable children through school fees sponsorships for inclusive education.</p>
+                <a href="#get-involved" class="cta-button">Learn More</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-child icon"></i>
+                <h3>Learning Roots</h3>
+                <p>Engaging young children with holistic, play-based learning to ensure a strong educational foundation.</p>
+                <a href="#get-involved" class="cta-button">Learn More</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-cross icon"></i>
+                <h3>Spiritual Transformation</h3>
+                <p>Nurturing children’s spiritual journey and providing compassionate, faith-based care.</p>
+                <a href="#get-involved" class="cta-button">Learn More</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-water icon"></i>
+                <h3>Water, Sanitation & Hygiene (WASH)</h3>
+                <p>Promoting hygiene education through WASH clubs and improving school sanitation facilities.</p>
+                <a href="#get-involved" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-involved" class="container">
+        <h2>Get Involved</h2>
+        <div class="get-involved">
+            <div class="card">
+                <i class="fas fa-hands-helping icon"></i>
+                <h3>Volunteer</h3>
+                <p>Join us in making a difference. Become a volunteer and help transform lives in our communities.</p>
+                <a href="#contact" class="cta-button">Become a Volunteer</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-donate icon"></i>
+                <h3>Donate</h3>
+                <p>Your support can provide crucial resources for vulnerable children and families.</p>
+                <a href="#contact" class="cta-button">Donate Now</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-calendar icon"></i>
+                <h3>Fundraising Events</h3>
+                <p>Participate in or organize fundraising events to support Ngao Ya Imani’s initiatives.</p>
+                <a href="#contact" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="container">
+        <h2>News & Updates</h2>
+        <p>Stay updated with the latest news, impact stories, and milestones achieved by Ngao Ya Imani International.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us with any inquiries or to learn more about how you can help.</p>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Ngao Ya Imani International | <a href="#contact" class="footer-links">Contact Us</a> | <a href="#about" class="footer-links">About Us</a></p>
+    <p>Follow us: 
+        <a href="#" class="footer-links"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="footer-links"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="footer-links"><i class="fab fa-instagram"></i></a>
+    </p>
+</footer>
+
+</body>
+</html>
